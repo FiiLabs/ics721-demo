@@ -90,7 +90,7 @@ start:
 	./network/start.sh
 
 start-go-relayer:
-	./network/relayer/interchain-nft-config/rly.sh
+	./network/relayer/interchain-nft-config/start.sh
 
 start-hermes-rly:
 	./network/hermes/start.sh
