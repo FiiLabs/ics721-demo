@@ -89,12 +89,19 @@ start:
 	@echo "Starting up test network"
 	./network/start.sh
 
-start-rly:
+start-go-relayer:
+	./network/relayer/interchain-nft-config/rly.sh
+
+start-hermes-rly:
 	./network/hermes/start.sh
 
 kill-dev:
 	@echo "Killing nftd and removing previous data"
 	-@rm -rf ./data
+	-@killall nftd 2>/dev/null
+
+kill-dev-without-data:
+	@echo "Killing nftd"
 	-@killall nftd 2>/dev/null
 
 ########################################
